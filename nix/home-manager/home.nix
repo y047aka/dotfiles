@@ -18,6 +18,22 @@
   # changes in each release.
   home.stateVersion = "25.05";
 
+  home.packages = with pkgs; [
+    git
+    direnv
+    nix-direnv
+  ];
+
+  programs = {
+    direnv = {
+      enable = true;
+      enableBashIntegration = true; # see note on other shells below
+      nix-direnv.enable = true;
+    };
+
+    bash.enable = true; # see note on other shells below
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

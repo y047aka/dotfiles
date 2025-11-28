@@ -10,7 +10,7 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -21,28 +21,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      packages.${system}.my-packages = pkgs.buildEnv {
-        name = "my-packages-list";
-        paths = with pkgs; [
-          git
-          curl
-        ];
-      };
-
-      apps.${system}.update = {
-        type = "app";
-        program = toString (pkgs.writeShellScript "update-script" ''
-          set -e
-          echo "Updating flake..."
-          nix flake update
-          echo "Updating nix-darwin..."
-          sudo nix run nix-darwin -- switch --flake .#yoshitaka-darwin
-          echo "Updating home-manager..."
-          nix run nixpkgs#home-manager -- switch --flake .#myHomeConfig          
-          echo "Update complete!"
-        '');
-      };
-
       darwinConfigurations.yoshitaka-darwin = nix-darwin.lib.darwinSystem {
         system = system;
         modules = [
@@ -64,5 +42,18 @@
         };
       };
 
+      apps.${system}.update = {
+        type = "app";
+        program = toString (pkgs.writeShellScript "update-script" ''
+          set -e
+          echo "Updating flake..."
+          nix flake update
+          echo "Updating nix-darwin..."
+          sudo nix run nix-darwin -- switch --flake .#yoshitaka-darwin
+          echo "Updating home-manager..."
+          nix run nixpkgs#home-manager -- switch --flake .#myHomeConfig
+          echo "Update complete!"
+        '');
+      };
     };
 }
