@@ -19,21 +19,25 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    git
     direnv
     nix-direnv
   ];
 
-  programs = {
-    direnv = {
-      enable = true;
-      enableBashIntegration = true; # see note on other shells below
-      nix-direnv.enable = true;
-    };
+  # Programs ------------------------------------
 
-    bash.enable = true; # see note on other shells below
+  programs.bash.enable = true;
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
   };
 
-  # Let Home Manager install and manage itself.
+  programs.git = {
+    enable = true;
+    userName = "Yoshitaka Totsuka";
+    userEmail = "y047aka@gmail.com";
+  };
+
   programs.home-manager.enable = true;
 }
