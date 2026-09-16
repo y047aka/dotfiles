@@ -28,15 +28,15 @@
       # cleanup = "uninstall";
     };
     casks = [
-      "claude-code"
+      "claude"
       "figma"
       "google-chrome"
       "obsidian"
-      "opencode-desktop"
-      "raycast"
+      "pi-coding-agent"
       "slack"
       "thebrowsercompany-dia"
       "visual-studio-code"
+      "whatsapp"
       "zed"
     ];
   };

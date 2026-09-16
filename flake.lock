@@ -7,16 +7,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1769580047,
-        "narHash": "sha256-tNqCP/+2+peAXXQ2V8RwsBkenlfWMERb+Uy6xmevyhM=",
+        "lastModified": 1789267039,
+        "narHash": "sha256-LWiBv9yAYFi2LPbUhDGHPGKYskJQjj2fw12OlyO1uQo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "366d78c2856de6ab3411c15c1cb4fb4c2bf5c826",
+        "rev": "ec172013fa62135f58fb58dd17ae9651e8f39727",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
-        "ref": "release-25.11",
+        "ref": "release-26.05",
         "repo": "home-manager",
         "type": "github"
       }
@@ -28,32 +28,32 @@
         ]
       },
       "locked": {
-        "lastModified": 1767634391,
-        "narHash": "sha256-owcSz2ICqTSvhBbhPP+1eWzi88e54rRZtfCNE5E/wwg=",
+        "lastModified": 1783744694,
+        "narHash": "sha256-2cp6N3rrwnGYLTx9l6N+NI+kwrCWxvJUbj5WJhvB29A=",
         "owner": "nix-darwin",
         "repo": "nix-darwin",
-        "rev": "08585aacc3d6d6c280a02da195fdbd4b9cf083c2",
+        "rev": "c3e90c89649b07d1a96e4b9dd6cd0d6e44b91a74",
         "type": "github"
       },
       "original": {
         "owner": "nix-darwin",
-        "ref": "nix-darwin-25.11",
+        "ref": "nix-darwin-26.05",
         "repo": "nix-darwin",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1769566947,
-        "narHash": "sha256-UpkIqCn9t4DYgzjoY87pYYVklmWcse+QDJjW4czz3BE=",
+        "lastModified": 1789155820,
+        "narHash": "sha256-cTHZTeYRV42p62ss3ZEFnBXrW3WpLgDpYWYyat4V2b8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b8b099e0cf8cf14c3ff5482bf3c3cd92f8efa628",
+        "rev": "8029b6c369415ee1ef02a86f352806348f104db9",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixpkgs-25.11-darwin",
+        "ref": "nixpkgs-26.05-darwin",
         "repo": "nixpkgs",
         "type": "github"
       }
